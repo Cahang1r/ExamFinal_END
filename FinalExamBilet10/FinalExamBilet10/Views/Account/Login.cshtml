@@ -1,0 +1,23 @@
+﻿@using FinalExamBilet10.ViewModels.Account
+@{
+    Layout = null;
+}
+@model LoginVm
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+<div class="container">
+    <form method="post">
+        <div class="mb-3">
+            <label asp-for="UserNameOrEmail" class="form-label">Email address</label>
+            <input asp-for="UserNameOrEmail" type="text" class="form-control">
+            <span asp-validation-for="UserNameOrEmail" id="emailHelp" class="form-text"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Password" class="form-label">Email address</label>
+            <input asp-for="Password" type="password" class="form-control">
+            <span asp-validation-for="Password" id="emailHelp" class="form-text"></span>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    </form>
+</div>
+

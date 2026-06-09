@@ -1,0 +1,37 @@
+﻿
+
+@model TeamCreateVM
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="container" style="margin-left:300px">
+    <main>
+        <form method="post" asp-action="Create" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Enter Name</label>
+                <input type="text" asp-for="Name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <span asp-validation-for="Name" class="label label-important"></span>
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Enter Job</label>
+                <input type="text" asp-for="Job" class="form-control" id="exampleInputPassword1">
+                <span asp-validation-for="Job" class="label label-important"></span>
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Enter Description</label>
+                <input type="text" asp-for="Description" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <span asp-validation-for="Description" class="label label-important"></span>
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Enter Image</label>
+                <input type="file" asp-for="Image" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <span asp-validation-for="Image" class="label label-important"></span>
+            </div>
+        
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <a asp-action="Index" class="btn btn-secondary">Back</a>
+        </form>
+    </main>
+</div>
+

@@ -1,0 +1,18 @@
+﻿@model Team
+@{
+    ViewData["Title"] = "Detail";
+}
+
+<div class="container" style="margin-left:300px">
+    <main>
+        <div class="card" style="width: 18rem;">
+            <img src="~/assets/images/@Model.Image" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">@Model.Name</h5>
+                <h5 class="card-title">@Model.Job</h5>
+                <p class="card-text">@Model.Description</p>
+                <a asp-action="Index" class="btn btn-primary">Go back</a>
+            </div>
+        </div>
+    </main>
+</div>
